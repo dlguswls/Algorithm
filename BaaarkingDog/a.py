@@ -26,12 +26,30 @@
 # print(func3(756580036))
 
 
-def func4(n) : 
-    i = 0
-    sum = 0
-    while 2**i < n : 
-          i += 1
-    return 2**(i-1)
+# def func4(n) : 
+#     i = 0
+#     sum = 0
+#     while 2**i < n : 
+#           i += 1
+#     return 2**(i-1)
     
-print(func4(97615282))
+# print(func4(97615282))
+
+
+import heapq
+
+h = []
+result = []
+
+interble = [1,3,5,7,9,2,4,6,8,0]
+
+for value in interble: 
+    heapq.heappush(h, value)
+    print(value)
+print(h)
+
+for _ in range(len(h)):
+    result.append(heapq.heappop(h))
+print(result)
+print(h)
 
