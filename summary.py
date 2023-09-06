@@ -33,6 +33,7 @@ data = set([1, 2, 3])  # 또는 data = {1, 2, 3}
 data.add(4)  # 새로운 원소 추가
 data.update([5, 6])  # 새로운 원소 여러 개 추가
 data.remove(3)   # 특정한 값 갖는 원소 삭제
+data.discard(3)  # data에 3 원소가 없을 때 실행해도 오류 X
 
 # global
 a = 0
