@@ -113,6 +113,7 @@ print("값이 [-1, 3] 범위에 있는 데이터 개수 출력 : ", count_by_ran
 ## 연속적으로 나열된 데이터의 시작부분이나 끝부분에 데이터를 삽입하거나 삭제할 때 효과적
 from collections import deque
 data = deque([2, 3, 4])
+
 data.appendleft(1)
 data.append(5)
 print(data)

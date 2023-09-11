@@ -42,6 +42,5 @@ for plan in plans :
             ny = y + dy[i]
     if nx <= 0 or nx > 5 or ny <= 0 or ny>5 : 
         continue
-    print(ny, nx)
     x, y = nx, ny
 print(y, x)
