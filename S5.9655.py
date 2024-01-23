@@ -1,14 +1,17 @@
 import sys
-import random
 
 N = int(sys.stdin.readline().strip())
-choice_list = [1, 3]
-cnt = 0
-while N>0 : 
-    choice = random.choice(choice_list)
-    N -= choice
-    cnt += 1
-if cnt % 2 == 0 : 
-    print("CY")
-else : 
-    print("SK")
+ 
+dp = [0] * (1000 + 1)
+
+dp[1] = 1
+dp[2] = 2
+dp[3] = 1
+ 
+for n in range(4, N+1):
+    dp[n] = min(dp[n-1], dp[n-3]) + 1
+ 
+if dp[N] % 2 == 1:
+    print('SK')
+else:
+    print('CY')
